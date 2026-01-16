@@ -1,30 +1,42 @@
-# Common Logic Controlled English (CLCE) – Sowa 2004 Draft
+# Common Logic Controlled English (CLCE) – Sowa 2004 Draft Exploration
 
-A readable transcription and starter exploration of John F. Sowa's February 2004 draft:  
-**Common Logic Controlled English** – an English-like syntax for full first-order logic (FOL) with equality, sets, sequences, and integers.
+Transcription, examples, and notes on John F. Sowa's 2004 draft of **Common Logic Controlled English** — a controlled natural language that reads like English but translates cleanly to first-order logic (FOL), conceptual graphs (CGIF), etc.
 
-Goal: Make CLCE accessible again for study, especially in **AI / knowledge representation** research (symbolic AI, neurosymbolic systems, explainable AI, ontology engineering, controlled natural languages for LLMs).
+**Live repo**: https://github.com/NullLabTests/clce-sowa-2004-exploration
 
-## Why this matters in 2026 AI research
-CLCE was ahead of its time: a human-readable surface syntax that compiles cleanly to FOL / conceptual graphs.  
-Usefulness score: **7.5/10**  
-- Strong for: KR foundations, semantic parsing, verifiable reasoning chains, prompt-to-logic translation  
-- Weaker for: modern modalities, plurals, tenses (no native support)  
-- High potential: extend it to bridge symbolic logic ↔ LLMs (e.g., CLCE → structured output validation)
+## Why revive CLCE in 2026 AI research?
+CLCE is a human-readable syntax for precise logic — perfect for bridging symbolic KR and modern LLMs (e.g., structured outputs, verifiable reasoning, neurosymbolic AI).
 
-Original draft source: http://www.jfsowa.com/clce/specs.htm
+**Usefulness score: 7.5/10**  
+- High: Ontology engineering, semantic parsing, explainable AI, prompt-to-FOL tools  
+- Medium: Lacks native modality/plurals/tenses — but extensible  
+- Potential: CLCE → LangChain / LlamaIndex structured chains, or validation of LLM logic
 
-## Quick start examples (in examples/basic.clce)
-Every cat is on a mat.  
-If some person x is the mother of a person y, then y is a child of x.  
-For every prime number x, there is a prime number greater than x.
+Original draft: http://www.jfsowa.com/clce/specs.htm
 
-See docs/CLCE-draft-2004.md for the full transcribed text.
+### Key Example: "A cat is on a mat"
+Conceptual graph display form (from Sowa's examples):
 
-## Next steps / contributions welcome
-- Add a simple CLCE → FOL / CGIF parser (Python / Prolog)
-- Map examples to modern tools (OWL, SPARQL, LangChain structured output)
-- Add conceptual graph visuals
-- License ideas: CC-BY-SA 4.0 for transcription
+![Cat on a mat conceptual graph](assets/tombstone-belief-graph.gif?raw=true)  
+*(Belief/tombstone variant — classic illustration style)*
 
-Fork → PR → let's revive this!
+Another classic nested/context example:
+
+![Cat happy pet graph](assets/cat-happy.gif?raw=true)  
+*From "If a cat is on a mat, then it is a happy pet"*
+
+Type hierarchy example (useful for ontologies):
+
+![Type hierarchy graph](assets/type-hierarchy.gif?raw=true)
+
+## Contents
+- `docs/CLCE-draft-2004.md` → full transcribed draft excerpt  
+- `examples/basic.clce` → sample sentences  
+- `assets/` → conceptual graph images for illustration  
+
+## Next Steps / Contribute
+- Add a Python/Prolog parser stub for CLCE → FOL  
+- More examples (e.g., "Mary gives a dog a very juicy steak")  
+- Integrate with modern tools (OWL export, LLM prompt templates)  
+
+Fork/PR welcome! License: CC-BY-SA 4.0 (for transcription + additions)
